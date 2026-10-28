@@ -1,0 +1,19 @@
+
+# Données CIC-IDS2017 : ne pas envoyer sur GitHub
+data/raw/
+data/processed/
+*.parquet
+
+# Environnements Python
+.venv/
+venv/
+env/
+
+# Fichiers temporaires Python et Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Fichiers système
+.DS_Store
+Thumbs.db

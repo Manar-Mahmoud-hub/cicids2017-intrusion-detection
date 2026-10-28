@@ -1,0 +1,23 @@
+
+name: ids_env
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.11
+  - pandas
+  - numpy
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - jupyterlab
+  - notebook
+  - ipykernel
+  - pyarrow
+  - pyyaml
+  - pip
+  - pip:
+      - shap
