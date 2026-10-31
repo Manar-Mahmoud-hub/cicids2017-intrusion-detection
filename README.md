@@ -1,65 +1,67 @@
-# CIC-IDS2017 — Détection d’intrusions réseau
+# CIC-IDS2017 — Network Intrusion Detection
 
-## Présentation
+## Overview
 
-Ce projet vise à développer et à comparer des modèles de machine learning pour détecter les intrusions réseau à partir du dataset CIC-IDS2017.
+This project aims to develop and compare machine learning models for network intrusion detection using the CIC-IDS2017 dataset.
 
-L’objectif est d’étudier les données de trafic réseau, de préparer les caractéristiques, puis d’évaluer différentes approches de détection.
+The main objective is to analyze network traffic data, prepare relevant features, and evaluate different intrusion detection approaches.
 
-## Structure du projet
+## Project Structure
 
 ```text
 projet_data/
 ├── data/
-│   ├── raw/           # Données originales (non versionnées)
-│   └── processed/     # Données traitées (non versionnées)
-├── models/            # Modèles entraînés
-├── notebooks/         # Analyses et expérimentations
-├── reports/           # Rapports et résultats
-├── scripts/           # Scripts Python
-├── nom_du_projet/     # Modules Python du projet
+│   ├── raw/           # Original data (not tracked by Git)
+│   └── processed/     # Processed data (not tracked by Git)
+├── models/            # Trained models
+├── notebooks/         # Data analysis and experiments
+├── reports/           # Reports and results
+├── scripts/           # Python scripts
+├── nom_du_projet/     # Project Python modules
 ├── .gitignore
 ├── environment.yml
 ├── requirements.txt
 └── README.md
 ```
 
-## Travail réalisé
+## Work Completed
 
-- Inspection des huit fichiers Parquet.
-- Vérification des dimensions et des colonnes.
-- Traitement des valeurs infinies et manquantes.
-- Correction de certains labels mal encodés.
-- Fusion des données dans un dataset commun.
-- Analyse de la distribution des 15 classes.
-- Étude des doublons exacts et des lignes présentant les mêmes caractéristiques avec des labels différents.
-- Préparation des caractéristiques et de la cible.
-- Préparation d’une séparation entraînement/test en tenant compte des vecteurs de caractéristiques identiques.
+- Inspected the eight Parquet files.
+- Checked dataset dimensions and column names.
+- Handled infinite and missing values.
+- Fixed some incorrectly encoded labels.
+- Merged the data into a single unified dataset.
+- Analyzed the distribution of the 15 classes.
+- Investigated exact duplicates and records with identical feature values but different labels.
+- Prepared the input features and target variable.
+- Prepared a train-test split while accounting for identical feature vectors to prevent data leakage.
 
-## Travail à venir
+## Upcoming Work
 
-- Entraîner et évaluer un modèle Random Forest.
-- Étudier la détection d’anomalies avec Isolation Forest.
-- Explorer un autoencodeur et éventuellement un VAE.
-- Interpréter les prédictions avec SHAP.
-- Comparer les performances des différentes approches.
+- Train and evaluate a Random Forest model.
+- Explore anomaly detection using Isolation Forest.
+- Investigate an Autoencoder and potentially a Variational Autoencoder (VAE).
+- Interpret model predictions using SHAP.
+- Compare the performance of the different approaches.
 
-## Données
+## Dataset
 
-Les fichiers de données CIC-IDS2017 ne sont pas inclus dans ce dépôt GitHub, car ils sont volumineux. Ils doivent être obtenus séparément et placés dans les dossiers locaux prévus par le projet.
+The CIC-IDS2017 dataset files are not included in this GitHub repository because of their large size. They must be downloaded separately and placed in the corresponding local project directories.
 
-Les dossiers `data/raw/` et `data/processed/`, ainsi que les fichiers Parquet, sont exclus du suivi Git.
+The `data/raw/` and `data/processed/` directories, along with the Parquet files, are excluded from Git version control.
 
 ## Installation
 
-Créer et activer un environnement Python adapté au projet, puis installer les dépendances :
+Create and activate a suitable Python environment for the project, then install the required dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Les notebooks peuvent ensuite être ouverts avec Jupyter Notebook ou JupyterLab.
+The notebooks can then be opened and executed using Jupyter Notebook or JupyterLab.
 
 ## Collaboration
 
-Ce dépôt sert à partager les notebooks, les scripts, la documentation et les futurs résultats du projet. Les données brutes et traitées restent locales.
+This repository is intended to facilitate collaboration by sharing notebooks, scripts, documentation, and future experimental results.
+
+Raw and processed datasets remain stored locally and are not tracked by Git.
